@@ -217,8 +217,9 @@ function Conatct_Home() {
         </TableContainer>
       </div>
       <footer>
-        @Tip : This website is just an project, Please do not add your personal
-        details also delete the information added by clicking on DELETE option.
+        <span style={{ color: "red" }}>Note</span> : This website is just an
+        project, Please do not add your personal details also delete the
+        information added by clicking on DELETE option.
       </footer>
     </div>
   );
