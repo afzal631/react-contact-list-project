@@ -216,6 +216,10 @@ function Conatct_Home() {
           </Table>
         </TableContainer>
       </div>
+      <footer>
+        @Tip : This website is just an project, Please do not add your personal
+        details also delete the information added by clicking on DELETE option.
+      </footer>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { Email } from "@mui/icons-material";
@@ -10,6 +10,7 @@ function ContactAddnew() {
   const [Phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [val, setVal] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,6 +45,7 @@ function ContactAddnew() {
     setName("");
     setPhone("");
     setEmail("");
+    navigate("/");
   };
   return (
     <div
