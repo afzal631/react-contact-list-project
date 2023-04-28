@@ -33,10 +33,17 @@ function ContactAddnew() {
 
       fetch("https://contact-ward.onrender.com/users", requestOptions)
         .then((response) => response.json())
-        .then((result) => console.log(result))
+        .then((result) => {
+          // alert("Added successfully.");
+          window.confirm("Added successfully.");
+          window.location.reload();
+        })
         .catch((error) => console.log("error", error));
     };
     submit();
+    setName("");
+    setPhone("");
+    setEmail("");
   };
   return (
     <div
@@ -74,9 +81,9 @@ function ContactAddnew() {
           onMouseDown={(e) => setVal(true)}
           onChange={(e) => setName(e.target.value)}
         />
-        {Name.length == 0 && val && (
+        {/* {Name.length == 0 && val && (
           <span style={{ color: "red" }}>Enter the name</span>
-        )}
+        )} */}
         <TextField
           style={{ margin: "5px", width: "300px", backgroundColor: "white" }}
           label="Phone Number"
